@@ -3,6 +3,9 @@ window.addEventListener("load", function() {
         return response.json();
     }).then(function(json) {
         const container = document.querySelector("#container");
+        
+        json.sort((a, b) => {return b.hoursInSpace - a.hoursInSpace});
+
         for(let i = 0; i < json.length; i++) {
             let pic = json[i]["picture"];
             container.innerHTML += `
