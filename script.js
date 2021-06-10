@@ -21,5 +21,6 @@ window.addEventListener("load", function() {
             <img class="avatar" src="${pic}"/>
             </div>`;
         }
+        document.getElementById('count').innerHTML += `: ${json.length}`;
     });
 });
